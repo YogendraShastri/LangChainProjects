@@ -38,5 +38,42 @@
 - Document Q&A Bot (RAG)
 - Codebase Chatbot etc.
 
+### LangChain Building Blocks Components:
+- LLM Wrappers
+- Prompy Templates
+- Indexes
+- Chains (Combine Sequences)
+- Agents
 
+### langchain Prompt Template:
+- PromptTemplate is a utility in LangChain used to construct prompts dynamically by filling in variable placeholders.
+- We import ChatPromptTemplate from langchain.prompt to provide variables to the model.
+
+**Snippet**
+```python
+template_string = """
+convert the user review into little bit polite tone {customer_review} and return only the fine tuned review in {language} language.
+"""
+
+# Define the chat prompt template
+prompt_template = ChatPromptTemplate.from_template(
+    template_string,
+)
+
+customer_review = "i dont fucking like this product, it is very bad and useless, no one should buy this product, it is a waste of money"
+language = "english"
+
+# Create the chat prompt
+chat_prompt = prompt_template.format_messages(
+    customer_review=customer_review,
+    language=language
+)
+```
+- from the above image you can see, like fstring we added the variables [{customer_review},{language}] and than while creating chat prompt we provided the variables value.
+
+**PythonFile** : [langchain_chatPrompt_Template.py](langchain_chatPrompt_Template.py)
+
+### langchain Parser
+- structuring and formatting data for further processing downstream.
+- Data/Text -> Parser -> Extract and Format -> Desired Format
 
