@@ -121,6 +121,21 @@ Tell me a joke and format it as instructed.
 
 **PythonFile** : [langchain_DatetimeOutputParser.py](langchain_DatetimeOutputParser.py)
 
+### Langchain Memory:
+- LLMs are stateless by nature (they dont save anything...)
+- LangChain's memory module helps the model remember things from earlier in the conversation.
+- This means it can keep track of what was said before, so it doesn’t forget past interactions every time you call it.
+- This is especially useful when building chatbots, virtual assistants, or agents that need to hold a conversation and maintain context over time.
+
+### LangChain Memory Types:
+1. **ConversationBufferMemory** - Stores all messages in the conversation history.On each call, it injects the full conversation into a variable (usually called chat_history) for the model to use. Best for simple conversations where keeping everything is fine.
+2. **ConversationBufferWindowMemory** - Similar to ConversationBufferMemory, but instead of the entire conversation, it keeps only the most recent k interactions (where k is a number you set), Helps manage memory usage while still keeping recent context. Useful when older messages become irrelevant.
+3. **ConversationTokenBufferMemory** - Keeps the most recent interactions based on token count rather than message count. If the token limit is exceeded, older messages are removed, Ideal for working within model token limits while retaining as much recent history as possible.
+4. **ConversationSummaryMemory** - Instead of keeping full messages, it creates a running summary of the conversation using an LLM. This summary is updated after each interaction. Perfect for longer conversations where you want to preserve context without hitting token limits.
+5. **Entity** - Tracks entities (people, places, things) mentioned during a conversation. Uses an LLM to extract and remember facts about those entities. Useful for personalized agents or when you want the model to remember specific facts about users or topics.
+
+#### Examples:
+1. **ConversationBufferMemory** : 
 
 
 
