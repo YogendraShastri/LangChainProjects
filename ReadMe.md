@@ -110,8 +110,18 @@ Tell me a joke and format it as instructed.
 
 **Pythonfile** : [langchain_parser.py](langchain_parser.py)
 
-### CommaSeperatedListOutoutParser
+### CommaSeperatedListOutoutParser:
 - This parser is super useful when you ask an LLM to return a list of items separated by commas (like names, tools, ingredients, places, etc.), and you want to easily convert that string into a Python list.
+
+**PythonFile** : [langchain_CommaSeparatedListOutputParser.py](langchain_CommaSeparatedListOutputParser.py)
+
+### DatetimeOutputParser:
+- Purpose of a datetime output parser is to convert unstructured or semi-structured date and time strings, into a format that can be programmatically manipulated and analyzed.
+- It converts these extracted components into a native datetime object (e.g., datetime object in Python)
+
+**PythonFile** : [langchain_DatetimeOutputParser.py](langchain_DatetimeOutputParser.py)
+
+
 
 
 
