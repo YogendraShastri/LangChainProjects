@@ -39,10 +39,10 @@
 - Codebase Chatbot etc.
 
 ### LangChain Building Blocks Components:
-- LLM Wrappers
-- Prompy Templates
-- Indexes
-- Chains (Combine Sequences)
+- LLM Wrappers (Models)
+- Prompt Templates
+- Indexes (Text Spliting, Embedding, VectorDB, Retrival)
+- Chains (Combine Sequences, one state output, became another state Input)
 - Agents
 
 ### langchain Prompt Template:
@@ -136,6 +136,7 @@ Tell me a joke and format it as instructed.
 
 #### Examples:
 1. **ConversationBufferMemory** : 
+
 
 
 
