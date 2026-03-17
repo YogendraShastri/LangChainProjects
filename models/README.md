@@ -20,7 +20,7 @@ models/
     open_ai_llm.py
     llm_gemini.py
   EmbeddingModels/
-    gemini_embedding_models.py
+    openai_embedding_models.py
 ```
 
 ---
