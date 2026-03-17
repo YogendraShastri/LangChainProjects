@@ -1,0 +1,16 @@
+{
+    "name": null,
+    "input_variables": [
+        "lines",
+        "topic"
+    ],
+    "optional_variables": [],
+    "output_parser": null,
+    "partial_variables": {},
+    "metadata": null,
+    "tags": null,
+    "template": "You are a helpful assistant.\nWrite an introduction about the topic: {topic}\nConstraints:\n- Exactly {lines} lines\n- Clear and beginner-friendly\n",
+    "template_format": "f-string",
+    "validate_template": false,
+    "_type": "prompt"
+}

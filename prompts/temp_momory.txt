@@ -1,0 +1,2 @@
+('human', 'who is narendra modi')
+('system', 'narendra modi is prime minister of india')
