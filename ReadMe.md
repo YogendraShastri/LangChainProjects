@@ -71,7 +71,7 @@ chat_prompt = prompt_template.format_messages(
 ```
 - from the above image you can see, like fstring we added the variables [{customer_review},{language}] and than while creating chat prompt we provided the variables value.
 
-**PythonFile** : [langchain_chatPrompt_Template.py](langchain_chatPrompt_Template.py)
+**PythonFile** : [langchain_chatPrompt_Template.py](prompts/langchain_chatPrompt_Template.py)
 
 ### langchain Parser
 - LLMs (Large Language Models) are great at generating humans-like text, but machine often required data in formats like json, python classes, lists or other structured objects.
@@ -108,18 +108,18 @@ Tell me a joke and format it as instructed.
 # Rest Same.
 ```
 
-**Pythonfile** : [langchain_parser.py](langchain_parser.py)
+**Pythonfile** : [langchain_parser.py](parser/langchain_parser.py)
 
 ### CommaSeperatedListOutoutParser:
 - This parser is super useful when you ask an LLM to return a list of items separated by commas (like names, tools, ingredients, places, etc.), and you want to easily convert that string into a Python list.
 
-**PythonFile** : [langchain_CommaSeparatedListOutputParser.py](langchain_CommaSeparatedListOutputParser.py)
+**PythonFile** : [langchain_CommaSeparatedListOutputParser.py](parser/langchain_CommaSeparatedListOutputParser.py)
 
 ### DatetimeOutputParser:
 - Purpose of a datetime output parser is to convert unstructured or semi-structured date and time strings, into a format that can be programmatically manipulated and analyzed.
 - It converts these extracted components into a native datetime object (e.g., datetime object in Python)
 
-**PythonFile** : [langchain_DatetimeOutputParser.py](langchain_DatetimeOutputParser.py)
+**PythonFile** : [langchain_DatetimeOutputParser.py](parser/langchain_DatetimeOutputParser.py)
 
 ### Langchain Memory:
 - LLMs are stateless by nature (they dont save anything...)
