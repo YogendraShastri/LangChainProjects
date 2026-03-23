@@ -35,7 +35,7 @@ chat_prompt = prompt_template.format_messages(
 
 # Initialize Gemini model
 llm_model = ChatGoogleGenerativeAI(
-    model='gemini-1.5-flash-latest',
+    model='gemini-2.5-flash',
     google_api_key=API_KEY,
     temperature=0  # Less creativity, more deterministic output
 )
